@@ -4,25 +4,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/estilos.css">
     <title>Contacto</title>
 </head>
 <body>
     <header>
-        <h1 class="logo"><a href="../index.html">El Rincón Geek</a> </h1>
-        <nav>
-            <ul class="principalNavBar">
-                <li class="navBarOption"><a href="../index.html">Inicio</a> </li>
-                <li class="navBarOption"><a href="libros.html">Libros</a> </li>
-                <li class="navBarOption"><a href="videojuegos.html">Videojuegos</a> </li>
-                <li class="navBarOption"><a href="anime.html">Anime</a> </li>
-                <li class="navBarOption paginaActiva"><a href="contacto.html">Contacto</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid container-nav ">
+              <a class="navbar-brand logo" href="../index.html">El Rincón Geek</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto mb-lg-0">
+                  <li class=" nav-item navOption">
+                    <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
+                  </li>
+                  <li class="nav-item navOption">
+                    <a class="nav-link" href="pages/libros.html">Libros</a>
+                  </li>
+                  <li class="nav-item navOption">
+                    <a class="nav-link" href="pages/videojuegos.html">Videojuegos</a>
+                  </li>
+                  <li class="nav-item navOption">
+                    <a class="nav-link" href="pages/anime.html">Anime</a>
+                  </li>
+                  <li class="nav-item navOption">
+                    <a class="nav-link" href="pages/contacto.html">Contacto</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
         </nav>
     </header>
     <main class="mainContacto">
         <h2 class="tituloPagina">Comparte con nosotros cual es tu rincon favorito</h2>
-        <p class="citaBajoTitulo">A través de este formulario puedes enviarme un mensaje para ayudarme a corregir errores, a mejorar mi pagina, o simplemente para decir hola. Cualquier cosa que tengas para decir es bienvenida, así que no lo dudes y déjame un mensaje. Estaré feliz de contestarte!</p>
+        <p class="subtituloPrincipal">A través de este formulario puedes enviarme un mensaje para ayudarme a corregir errores, a mejorar mi pagina, o simplemente para decir hola. Cualquier cosa que tengas para decir es bienvenida, así que no lo dudes y déjame un mensaje. Estaré feliz de contestarte!</p>
         <form class="formularioContacto">
             <fieldset>
                 <legend>Mensaje</legend>
@@ -34,10 +52,47 @@
                 <input type="submit" value="Enviar mensaje">
                 <input type="reset" value="Borrar mensaje">
             </p>
-        </form>            
+        </form>        
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15665.348659899286!2d-74.8274876!3d11.0133099!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef42c4d4ad7ec73%3A0x9ab6eda3d5142548!2sCentro%20Comercial%20Buenavista!5e0!3m2!1ses-419!2sco!4v1675187182289!5m2!1ses-419!2sco" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <h3>¡Siguenos en nuestras redes sociales!</h3>
     </main>
+    <section>
+        <a class="linkPages" href="videojuegos.html">
+            <div class="cardLink cardOne">
+                <div class="borde">
+                    <img class="iconLink" src="../img/videogames.png" alt="">
+                </div>
+                <h3>Videojuegos</h3>
+                <p>Descubre los ultimos lanzamientos en videojuegos</p>
+            </div>
+        </a>
+        <a class="linkPages" href="libros.html">
+            <div class="cardLink cardTwoo">
+                <div class="borde">
+                    <img class="iconLink" src="../img/books.png" alt="">
+                </div>
+                <h3>Libros</h3>
+                <p>¿Ya sabes que será lo proximo que leeras?</p>
+            </div>
+        </a>
+        <a class="linkPages" href="anime.html"><div class="cardLink cardThree">
+            <div class="borde">
+                <img class="iconLink" src="../img/anime.png" alt="">               
+            </div>
+            <h3>Anime</h3>
+            <p>Animes de la temporada</p>
+        </div></a>
+        <a class="linkPages" href="contacto.html"><div class="cardLink cardFour">
+            <div class="borde">
+                <img class="iconLink" src="../img/contact.png" alt="">               
+            </div>
+            <h3>Contacto</h3>
+            <p>Dejanos saber tu opinion sobre tu rincon favorito</p>
+        </div></a>
+    </section>
     <footer>
         <h4>Todos los derechos reservados</h4>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
 </html>
