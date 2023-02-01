@@ -40,21 +40,58 @@
     </header>
     <main class="mainContacto">
         <h2 class="tituloPagina">Comparte con nosotros cual es tu rincon favorito</h2>
-        <p class="subtituloPrincipal">A través de este formulario puedes enviarme un mensaje para ayudarme a corregir errores, a mejorar mi pagina, o simplemente para decir hola. Cualquier cosa que tengas para decir es bienvenida, así que no lo dudes y déjame un mensaje. Estaré feliz de contestarte!</p>
-        <form class="formularioContacto">
-            <fieldset>
-                <legend>Mensaje</legend>
-                <p><label>Tu nombre:<input type="text" name="nombre"></label></p>
-                <p><label>Tu dirección de correo: <input type="email" name="correo"></label></p>
-                <p><label>Tu mensaje:<br><textarea name="mensaje"></textarea></label></p>
-            </fieldset>
-            <p>
-                <input type="submit" value="Enviar mensaje">
-                <input type="reset" value="Borrar mensaje">
-            </p>
-        </form>        
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15665.348659899286!2d-74.8274876!3d11.0133099!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef42c4d4ad7ec73%3A0x9ab6eda3d5142548!2sCentro%20Comercial%20Buenavista!5e0!3m2!1ses-419!2sco!4v1675187182289!5m2!1ses-419!2sco" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <p class="subForm">A través de este formulario puedes enviarme un mensaje para ayudarme a corregir errores, a mejorar mi pagina, o simplemente para decir hola. Cualquier cosa que tengas para decir es bienvenida, así que no lo dudes y déjame un mensaje. Estaré feliz de contestarte!</p>
+        <body>	
+            <div class="contact_form">
+                <div class="formulario">			
+                    <h1 class="tituloForm">Formulario de contacto</h1>
+                    <h3 class="subtituloForm">Escríbenos y en breve los pondremos en contacto contigo</h3>
+                    <form action="submeter-formulario.php" method="post">				
+                        <p class="textForm">
+                            <label for="nombre" class="colocar_nombre">Nombre
+                                <span class="obligatorio">*</span>
+                            </label>
+                            <input class="inputForm" type="text" name="introducir_nombre" id="nombre" required="obligatorio" placeholder="Escribe tu nombre">
+                        </p>
+                        <p class="textForm">
+                            <label for="email" class="colocar_email">Email
+                                <span class="obligatorio">*</span>
+                            </label>
+                            <input class="inputForm" type="email" name="introducir_email" id="email" required="obligatorio" placeholder="Escribe tu Email">
+                        </p>
+                        <p class="textForm">
+                            <label for="telefone" class="colocar_telefono">Teléfono
+                            </label>
+                            <input class="inputForm" type="tel" name="introducir_telefono" id="telefono" placeholder="Escribe tu teléfono">
+                        </p>		
+                        <p class="textForm">
+                            <label for="website" class="colocar_website">Sitio web
+                            </label>
+                            <input class="inputForm" type="url" name="introducir_website" id="website" placeholder="Escribe la URL de tu web">
+                        </p>		
+                        <p class="textForm">
+                            <label for="asunto" class="colocar_asunto">Asunto
+                                <span class="obligatorio">*</span>
+                            </label>
+                            <input class="inputForm" type="text" name="introducir_asunto" id="assunto" required="obligatorio" placeholder="Escribe un asunto">
+                        </p>		
+                        <p class="textForm">
+                            <label for="mensaje" class="colocar_mensaje">Mensaje
+                                <span class="obligatorio">*</span>
+                            </label>                     
+                            <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje" required="obligatorio" placeholder="Deja aquí tu comentario..."></textarea> 
+                        </p>	  								
+                        <button class="buttonForm" type="submit" name="enviar_formulario" id="enviar"><p class="textButton">Enviar</p></button>
+                        <p class="aviso textForm">
+                            <span class="obligatorio"> * </span>los campos son obligatorios.
+                        </p>				     
+                    </form>
+                </div>
+            </div>
+        <h3>Nos encontramos ubicados en Barranquilla, Colombia.</h3>        
+        <iframe class="mapIframe" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15665.348659899286!2d-74.8274876!3d11.0133099!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef42c4d4ad7ec73%3A0x9ab6eda3d5142548!2sCentro%20Comercial%20Buenavista!5e0!3m2!1ses-419!2sco!4v1675187182289!5m2!1ses-419!2sco" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         <h3>¡Siguenos en nuestras redes sociales!</h3>
+
     </main>
     <section>
         <a class="linkPages" href="videojuegos.html">

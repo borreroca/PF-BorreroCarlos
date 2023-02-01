@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans);
+@import url('https://fonts.googleapis.com/css?family=Poppins:400');
 
 *{
   margin: 0;
@@ -355,4 +357,124 @@ footer{
     margin-top: 1rem;
     background-color: #e68080;
   }
+}
+
+/* Estilos contacto en mobile */
+
+.mainContacto{
+  display: flex;
+}
+
+.subForm{
+  width: 80%;
+  font-size: 1.2rem;
+  margin-bottom: 0;
+}
+
+main .mapIframe {
+  margin-bottom: 1rem;
+  border-radius: 10%;
+}
+
+.contact_form{	
+	width: 90%; 
+  height: auto;
+  margin: 1rem auto;
+	border-radius: 10px;  
+	padding-top: 1.6rem;
+	padding-bottom: 1.4rem;  
+  background-color: #fbfbfb; 
+  padding-left: 30px; 
+}
+
+.inputForm{
+	background-color: #fbfbfb; 
+	width: 90%; 
+	height: 2.5rem; 
+	border-radius: 5px;
+  border: solid 1px #ab4493;
+	margin-top: 0.6rem;  
+	padding-left: 1rem;
+  margin-bottom: 1rem; 
+}
+
+.texto_mensaje{
+  background-color: #fbfbfb; 
+	width: 90%; 
+	height: 300px; 
+	border-radius: 5px;  
+  border: solid 1px #ab4493;
+	/* margin-top: 10px;  
+	padding-left: 10px;
+  margin-bottom: 20px; 
+  padding-top: 15px;  */
+}
+
+label{
+  display: block; 
+	float: center; 	
+}
+
+.textButton{
+  text-align: center;
+}
+
+.buttonForm{
+	height: 45px; 
+	text-transform: uppercase;
+	background-color: #ab4493; 
+	border-color: #ab4493; 
+	border-style: solid; 
+	border-radius: 10px;	
+	width: 70%;   
+  cursor: pointer;
+  padding-left: -30px; 
+}
+
+
+.buttonForm .textForm{
+	color: #fff; 
+}
+
+
+.obligatorio{
+	color: #ab4493; 
+}
+
+
+.aviso{
+	font-size: 13px;  
+	color: #0e0e0e;  
+}
+
+
+.tituloForm{
+	font-size: 39px;  
+	text-align: letf; 
+	padding-bottom: 20px; 
+	color: #ab4493;
+}
+
+
+.subtituloForm{
+	font-size: 16px; 
+	padding-bottom: 30px;
+	color: #0e0e0e;   
+}
+
+
+.textForm{
+	font-size: 14px; 
+	color: #0e0e0e; 
+}
+
+.formulario input:focus{
+	outline:0;
+	border: 1px solid #97d848;
+}
+
+
+.formulario textarea:focus{
+	outline:0;
+	border: 1px solid #97d848;
 }
