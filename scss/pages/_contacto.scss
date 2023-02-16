@@ -92,16 +92,17 @@
                     border-radius: 10px;	
                     width: 70%;   
                     cursor: pointer;
-                    padding-left: -30px; 
 
                     .textButton{
                         text-align: center;
+                        margin: 0px;
                     }
                 }
                 .aviso{
                     text-align: center;
-                      font-size: 13px;  
-                      color: #0e0e0e;  
+                    margin-top: 0.4rem;
+                    font-size: 13px;  
+                    color: #0e0e0e;  
                 }
             }
         }
@@ -162,3 +163,106 @@
         }
     }
 }
+
+@media screen and (min-width:600px){
+
+    .mainContacto{
+        .subtituloPrincipal{
+            padding: 2rem;
+          }
+
+        .mapIframe {
+            width: 90%;
+            min-height: 400px;
+            max-width: 600px;
+            margin-bottom: 2rem;
+            border-radius: 10%;
+        }
+
+        .linkSocialNet{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+    
+            .containerNetworks {
+                gap: 2rem;
+                font-size: 2.5rem;
+                a{
+                    width: 70px;
+                    height: 70px;
+                    line-height: 70px;
+                }
+            }
+        }
+    } 
+}
+
+@media screen and (min-width:992px){
+
+    .mainContacto{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "tituloPagina  tituloPagina"
+            "subForm subForm"
+            "contact_form linkSocialNet"
+            "subtituloPrincipal subtituloPrincipal "
+            "mapIframe mapIframe ";
+        justify-content: center;
+        justify-items: center;
+
+        .tituloPagina{grid-area: tituloPagina;}
+        .subForm{grid-area: subForm;}
+        .contact_form{grid-area: contact_form;}
+        .linkSocialNet{grid-area: linkSocialNet;}
+        .subtituloPrincipal{grid-area: subtituloPrincipal;}
+        .mapIframe{grid-area: mapIframe;}
+
+        .linkSocialNet{   
+            .containerNetworks {
+                flex-wrap: wrap;
+            }
+        }
+
+        .subForm{
+            width: 50%;
+        }
+
+        .contact_form{	
+            width: 80%;
+            max-width: 700px;
+            margin: 3rem auto 1rem;
+            padding-top: 2rem;
+            padding-bottom: 1.4rem;  
+    
+            .containerForm{
+                .tituloForm{
+                    font-size: 45px;
+                }    
+                .mainForm{
+                    .textForm{
+                        font-size: 20px; 
+                        .inputForm{
+                            height: 3.5rem; 
+                        }
+                    }
+                    .buttonForm{
+                        height: 5rem; 
+                        .textButton{
+                            text-align: center;
+                            margin: 1rem;
+                        }
+                    }
+                    .aviso{
+                        text-align: center;
+                          font-size: 1rem;  
+                          color: #0e0e0e;  
+                    }
+                }
+            }
+        }
+    }
+}    

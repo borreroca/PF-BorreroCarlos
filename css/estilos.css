@@ -304,12 +304,13 @@ footer {
         border-style: solid;
         border-radius: 10px;
         width: 70%;
-        cursor: pointer;
-        padding-left: -30px; }
+        cursor: pointer; }
         .mainContacto .contact_form .containerForm .mainForm .buttonForm .textButton {
-          text-align: center; }
+          text-align: center;
+          margin: 0px; }
       .mainContacto .contact_form .containerForm .mainForm .aviso {
         text-align: center;
+        margin-top: 0.4rem;
         font-size: 13px;
         color: #0e0e0e; }
   .mainContacto .linkSocialNet {
@@ -352,3 +353,72 @@ footer {
         background-color: #0077b5;
         color: whitesmoke;
         border-color: whitesmoke; }
+
+@media screen and (min-width: 600px) {
+  .mainContacto .subtituloPrincipal {
+    padding: 2rem; }
+  .mainContacto .mapIframe {
+    width: 90%;
+    min-height: 400px;
+    max-width: 600px;
+    margin-bottom: 2rem;
+    border-radius: 10%; }
+  .mainContacto .linkSocialNet {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center; }
+    .mainContacto .linkSocialNet .containerNetworks {
+      gap: 2rem;
+      font-size: 2.5rem; }
+      .mainContacto .linkSocialNet .containerNetworks a {
+        width: 70px;
+        height: 70px;
+        line-height: 70px; } }
+
+@media screen and (min-width: 992px) {
+  .mainContacto {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "tituloPagina  tituloPagina" "subForm subForm" "contact_form linkSocialNet" "subtituloPrincipal subtituloPrincipal " "mapIframe mapIframe ";
+    justify-content: center;
+    justify-items: center; }
+    .mainContacto .tituloPagina {
+      grid-area: tituloPagina; }
+    .mainContacto .subForm {
+      grid-area: subForm; }
+    .mainContacto .contact_form {
+      grid-area: contact_form; }
+    .mainContacto .linkSocialNet {
+      grid-area: linkSocialNet; }
+    .mainContacto .subtituloPrincipal {
+      grid-area: subtituloPrincipal; }
+    .mainContacto .mapIframe {
+      grid-area: mapIframe; }
+    .mainContacto .linkSocialNet .containerNetworks {
+      flex-wrap: wrap; }
+    .mainContacto .subForm {
+      width: 50%; }
+    .mainContacto .contact_form {
+      width: 80%;
+      max-width: 700px;
+      margin: 3rem auto 1rem;
+      padding-top: 2rem;
+      padding-bottom: 1.4rem; }
+      .mainContacto .contact_form .containerForm .tituloForm {
+        font-size: 45px; }
+      .mainContacto .contact_form .containerForm .mainForm .textForm {
+        font-size: 20px; }
+        .mainContacto .contact_form .containerForm .mainForm .textForm .inputForm {
+          height: 3.5rem; }
+      .mainContacto .contact_form .containerForm .mainForm .buttonForm {
+        height: 5rem; }
+        .mainContacto .contact_form .containerForm .mainForm .buttonForm .textButton {
+          text-align: center;
+          margin: 1rem; }
+      .mainContacto .contact_form .containerForm .mainForm .aviso {
+        text-align: center;
+        font-size: 1rem;
+        color: #0e0e0e; } }
