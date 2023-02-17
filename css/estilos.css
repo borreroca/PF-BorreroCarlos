@@ -422,3 +422,38 @@ footer {
         text-align: center;
         font-size: 1rem;
         color: #0e0e0e; } }
+
+.mainAnime {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0rem 2rem; }
+  .mainAnime article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; }
+    .mainAnime article .tituloPagina {
+      padding: 1rem;
+      margin-top: 2rem; }
+    .mainAnime article .parrafoCita {
+      width: 90%; }
+    .mainAnime article .seccionAnime {
+      border: solid black 3px;
+      padding: 1.5rem 1rem;
+      margin: 1rem 0rem; }
+      .mainAnime article .seccionAnime .subtitulos {
+        margin: 1rem; }
+      .mainAnime article .seccionAnime .contenedorInfo {
+        display: flex;
+        flex-direction: column;
+        text-align: justify;
+        align-items: center; }
+        .mainAnime article .seccionAnime .contenedorInfo .parrafoInfo {
+          width: 85%; }
+      .mainAnime article .seccionAnime .imgAnime {
+        margin: 1rem;
+        width: 80%;
+        border-radius: 0.5rem;
+        border: 1px black solid; }
