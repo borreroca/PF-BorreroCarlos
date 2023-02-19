@@ -6,49 +6,124 @@
     text-align: center;
     padding: 0rem 2rem;
 
-    article{
+    .tituloPagina{
+        padding: 1rem;
+        margin-top: 2rem;
+    }
 
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+    .parrafoCita{
+        width: 90%;
+    }
+
+    .seccionAnime{
+        border: solid rgb(167, 159, 159) 3px;
+        padding: 1.5rem 1rem;
+        margin: 1rem 0rem;
+
+        .subtitulos{
+            margin: 1rem;
+        }
+
+        .contenedorInfo{
+            display: flex;
+            flex-direction: column;
+            text-align: justify;
+            align-items: center;
+            .parrafoInfo{
+                width: 85%;
+            }
+        }
+
+        .imgAnime{
+            margin: 1rem;
+            width: 80%;
+            border-radius: 0.5rem;
+            border: 1px black solid;
+        }
+    }
+}
+
+@media screen and (min-width:600px){
+
+    .mainAnime{
+        .tituloPagina{
+            font-size: 3rem;
+        }
+    
+        .parrafoCita{
+            font-size: 1.3rem;
+        }
 
         .tituloPagina{
             padding: 1rem;
             margin-top: 2rem;
         }
-    
-        .parrafoCita{
-            width: 90%;
-        }
 
         .seccionAnime{
-            border: solid black 3px;
-            padding: 1.5rem 1rem;
-            margin: 1rem 0rem;
-
             .subtitulos{
-                margin: 1rem;
+                font-size: 2rem;
             }
-
             .contenedorInfo{
-                display: flex;
-                flex-direction: column;
-                text-align: justify;
-                align-items: center;
-                .parrafoInfo{
-                    width: 85%;
+                .fechaEstreno{
+                    font-size: 1.5rem;
                 }
             }
-
-            .imgAnime{
-                margin: 1rem;
-                width: 80%;
-                border-radius: 0.5rem;
-                border: 1px black solid;
-            }
         }
-
     }
     
+}
+
+@media screen and (min-width:992px){
+
+    .mainAnime{  
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        gap: 1rem;
+        grid-template-areas:
+            "tituloPagina tituloPagina"
+            "parrafoCita parrafoCita"
+            "seccionUno seccionDos"
+            "seccionTres seccionCuatro";
+    
+        justify-content: center;
+        justify-items: center;
+
+        .tituloPagina{
+            grid-area: tituloPagina;
+            font-size: 3.2rem;
+        }
+    
+        .parrafoCita{
+            grid-area: parrafoCita;
+            width: 70%;
+        }
+
+        .seccionUno{grid-area: seccionUno}
+        .seccionDos{grid-area: seccionDos}
+        .seccionTres{grid-area: seccionTres}
+        .seccionCuatro{grid-area: seccionCuatro}
+
+        .seccionAnime{
+            height: 42rem;
+            margin: 0.5rem;
+            display: flex;
+            flex-direction:column;
+            justify-content: center;
+            align-items: center;
+            .subtitulos{
+                font-size: 2rem;
+            }
+            .contenedorInfo{
+                .fechaEstreno{
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+
+    .pagesContainer{
+        margin-top: 1rem;
+    }
 }

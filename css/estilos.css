@@ -7,7 +7,7 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(51deg, #500e0e, #050405, #493342, #221046, #11144C);
+  background: linear-gradient(51deg, #500e0e, #221c22, #493342, #221046, #11144C);
   background-size: 360% 360%;
   animation: gradient-animation 30s ease infinite;
   color: #cbcccf; }
@@ -429,31 +429,84 @@ footer {
   align-items: center;
   text-align: center;
   padding: 0rem 2rem; }
-  .mainAnime article {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center; }
-    .mainAnime article .tituloPagina {
-      padding: 1rem;
-      margin-top: 2rem; }
-    .mainAnime article .parrafoCita {
-      width: 90%; }
-    .mainAnime article .seccionAnime {
-      border: solid black 3px;
-      padding: 1.5rem 1rem;
-      margin: 1rem 0rem; }
-      .mainAnime article .seccionAnime .subtitulos {
-        margin: 1rem; }
-      .mainAnime article .seccionAnime .contenedorInfo {
-        display: flex;
-        flex-direction: column;
-        text-align: justify;
-        align-items: center; }
-        .mainAnime article .seccionAnime .contenedorInfo .parrafoInfo {
-          width: 85%; }
-      .mainAnime article .seccionAnime .imgAnime {
-        margin: 1rem;
-        width: 80%;
-        border-radius: 0.5rem;
-        border: 1px black solid; }
+  .mainAnime .tituloPagina {
+    padding: 1rem;
+    margin-top: 2rem; }
+  .mainAnime .parrafoCita {
+    width: 90%; }
+  .mainAnime .seccionAnime {
+    border: solid #a79f9f 3px;
+    padding: 1.5rem 1rem;
+    margin: 1rem 0rem; }
+    .mainAnime .seccionAnime .subtitulos {
+      margin: 1rem; }
+    .mainAnime .seccionAnime .contenedorInfo {
+      display: flex;
+      flex-direction: column;
+      text-align: justify;
+      align-items: center; }
+      .mainAnime .seccionAnime .contenedorInfo .parrafoInfo {
+        width: 85%; }
+    .mainAnime .seccionAnime .imgAnime {
+      margin: 1rem;
+      width: 80%;
+      border-radius: 0.5rem;
+      border: 1px black solid; }
+
+@media screen and (min-width: 600px) {
+  .mainAnime .tituloPagina {
+    font-size: 3rem; }
+  .mainAnime .parrafoCita {
+    font-size: 1.3rem; }
+  .mainAnime .tituloPagina {
+    padding: 1rem;
+    margin-top: 2rem; }
+  .mainAnime .seccionAnime .subtitulos {
+    font-size: 2rem; }
+  .mainAnime .seccionAnime .contenedorInfo .fechaEstreno {
+    font-size: 1.5rem; } }
+
+@media screen and (min-width: 992px) {
+  .mainAnime {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    gap: 1rem;
+    grid-template-areas: "tituloPagina tituloPagina" "parrafoCita parrafoCita" "seccionUno seccionDos" "seccionTres seccionCuatro";
+    justify-content: center;
+    justify-items: center; }
+    .mainAnime .tituloPagina {
+      grid-area: tituloPagina;
+      font-size: 3.2rem; }
+    .mainAnime .parrafoCita {
+      grid-area: parrafoCita;
+      width: 70%; }
+    .mainAnime .seccionUno {
+      grid-area: seccionUno; }
+    .mainAnime .seccionDos {
+      grid-area: seccionDos; }
+    .mainAnime .seccionTres {
+      grid-area: seccionTres; }
+    .mainAnime .seccionCuatro {
+      grid-area: seccionCuatro; }
+    .mainAnime .seccionAnime {
+      height: 42rem;
+      margin: 0.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      .mainAnime .seccionAnime .subtitulos {
+        font-size: 2rem; }
+      .mainAnime .seccionAnime .contenedorInfo .fechaEstreno {
+        font-size: 1.5rem; }
+  .pagesContainer {
+    margin-top: 1rem; } }
+
+.mainLibros {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0rem 2rem; }
