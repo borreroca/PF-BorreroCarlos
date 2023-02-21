@@ -1,10 +1,10 @@
-
+@import "../base/mixins";
+@import "../base/extend";
+@import "../base/variables";
 
 .mainContacto{
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flex(column);
     text-align: center;
     padding: 0rem 2rem;
 
@@ -15,6 +15,7 @@
     .tituloPagina{
         padding: 1rem;
         margin-top: 2rem;
+        font-size: $title-size-mobile;
     }
 
     .subForm{
@@ -30,22 +31,19 @@
         width: 90%;
         max-width: 400px;
         margin-bottom: 1rem;
-        border-radius: 10%;
+        border-radius: $border-radius;
     }
 
     .contact_form{	
         margin: 1rem auto;
-        border-radius: 10px;  
+        border-radius: $border-radius;  
         padding-top: 1.6rem;
         padding-bottom: 1.4rem;  
-        background-color: #fbfbfb;
+        background-color: $color-principal;
 
         .containerForm{
-            display: flex;
-            flex-direction: column;
+            @include flex(column);
             text-align: center;
-            align-items: center;
-
             .tituloForm{
                 width: 80%;
                 font-size: 39px;
@@ -63,7 +61,7 @@
                         background-color: #fbfbfb; 
                         width: 100%; 
                         height: 2.5rem; 
-                        border-radius: 5px;
+                        border-radius: $border-radius;
                         border: solid 1px #ab4493;
                         margin-top: 0.6rem;  
                         padding-left: 1rem;
@@ -73,7 +71,7 @@
                         background-color: #fbfbfb; 
                         width: 100%; 
                         height: 250px; 
-                        border-radius: 5px;  
+                        border-radius: $border-radius;  
                         border: solid 1px #ab4493;
                         padding-left: 10px;
                         padding-top: 15px;
@@ -89,7 +87,7 @@
                     background-color: #ab4493; 
                     border-color: #ab4493; 
                     border-style: solid; 
-                    border-radius: 10px;	
+                    border-radius: $border-radius;	
                     width: 70%;   
                     cursor: pointer;
 
@@ -109,11 +107,8 @@
     }
 
     .linkSocialNet{
-        display: flex;
-        flex-direction: column;
+        @include flex(column);
         text-align: center;
-        justify-content: center;
-
         .containerNetworks {
             display: flex;
             justify-content: center;
@@ -125,7 +120,7 @@
                 width: 60px;
                 height: 60px;
                 line-height: 60px;
-                background-color: whitesmoke;
+                background-color: $color-principal;
                 color: #262626;
                 border: solid black 1px;
                 border-radius:50%;
@@ -139,26 +134,26 @@
 
             .linkFace:hover{
                 background-color: #3b5999;
-                color: whitesmoke;
-                border-color: whitesmoke;
+                color: $color-principal;
+                border-color: $color-principal;
             }
 
             .linkTwt:hover{
                 background-color: #55acee;
-                color: whitesmoke;
-                border-color: whitesmoke;
+                color: $color-principal;
+                border-color: $color-principal;
             }
 
             .linkYout:hover{
                 background-color: #c4302b ;
-                color: whitesmoke;
-                border-color: whitesmoke;
+                color: $color-principal;
+                border-color: $color-principal;
             }
 
             .linkLinke:hover{
                 background-color: #0077b5;
-                color: whitesmoke;
-                border-color: whitesmoke;
+                color: $color-principal;
+                border-color: $color-principal;
             }
         }
     }
@@ -167,6 +162,10 @@
 @media screen and (min-width:600px){
 
     .mainContacto{
+        .tituloPagina{
+            font-size: $title-size-tablet;
+        }
+
         .subtituloPrincipal{
             padding: 2rem;
           }
@@ -176,14 +175,12 @@
             min-height: 400px;
             max-width: 600px;
             margin-bottom: 2rem;
-            border-radius: 10%;
+            border-radius: $border-radius;
         }
 
         .linkSocialNet{
-            display: flex;
-            flex-direction: column;
+            @include flex(column);
             text-align: center;
-            justify-content: center;
     
             .containerNetworks {
                 gap: 2rem;
@@ -214,7 +211,10 @@
         justify-content: center;
         justify-items: center;
 
-        .tituloPagina{grid-area: tituloPagina;}
+        .tituloPagina{
+            grid-area: tituloPagina;
+            font-size: $title-size-desktop;
+        }
         .subForm{grid-area: subForm;}
         .contact_form{grid-area: contact_form;}
         .linkSocialNet{grid-area: linkSocialNet;}
@@ -258,8 +258,8 @@
                     }
                     .aviso{
                         text-align: center;
-                          font-size: 1rem;  
-                          color: #0e0e0e;  
+                        font-size: 1rem;  
+                        color: #0e0e0e;  
                     }
                 }
             }

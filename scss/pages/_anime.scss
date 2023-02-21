@@ -1,13 +1,16 @@
+@import "../base/mixins";
+@import "../base/extend";
+@import "../base/variables";
+
+
 .mainAnime{
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flex(column);
     text-align: center;
     padding: 0rem 2rem;
 
     .tituloPagina{
-        font-size: 2.5rem;
+        font-size: $title-size-mobile;
         padding: 1rem;
         margin-top: 2rem;
     }
@@ -26,15 +29,26 @@
         padding: 1.5rem 1rem;
         margin: 1rem 0rem;
 
-        .subtitulos{
+        .tituloAnime{
             margin: 1rem;
+            @extend %diseñoTitulo;
+        }
+        .animeUno{
+            color: rgb(23, 89, 23);
+        }
+        .animeDos{
+            color: rgb(29, 29, 119);
+        }
+        .animeTres{
+            color: rgb(107, 33, 33);
+        }
+        .animeCuatro{
+            color: rgb(140, 146, 65);
         }
 
         .contenedorInfo{
-            display: flex;
-            flex-direction: column;
+            @include flex(column);
             text-align: justify;
-            align-items: center;
             .parrafoInfo{
                 width: 85%;
             }
@@ -43,7 +57,7 @@
         .imgAnime{
             margin: 1rem;
             width: 80%;
-            border-radius: 0.5rem;
+            border-radius: $border-radius;
             border: 1px black solid;
         }
     }
@@ -63,6 +77,7 @@
         .tituloPagina{
             padding: 1rem;
             margin-top: 2rem;
+            font-size: $title-size-tablet;
         }
 
         .descripciónCategoria{
@@ -71,7 +86,7 @@
         }
 
         .seccionAnime{
-            .subtitulos{
+            .tituloAnime{
                 font-size: 2rem;
             }
             .contenedorInfo{
@@ -103,7 +118,7 @@
 
         .tituloPagina{
             grid-area: tituloPagina;
-            font-size: 3.2rem;
+            font-size: $title-size-desktop;
         }
     
         .parrafoCita{
@@ -124,11 +139,8 @@
         .seccionAnime{
             height: 42rem;
             margin: 0.5rem;
-            display: flex;
-            flex-direction:column;
-            justify-content: center;
-            align-items: center;
-            .subtitulos{
+            @include flex(column);
+            .tituloAnime{
                 font-size: 2rem;
             }
             .contenedorInfo{

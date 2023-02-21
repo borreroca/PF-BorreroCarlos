@@ -1,14 +1,14 @@
-
+@import "../base/mixins";
+@import "../base/extend";
+@import "../base/variables";
 
 .mainVideojuegos{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flex(column);
     text-align: center;
     padding: 0rem 1rem;
 
     .tituloPagina{
-        font-size: 2.2rem;
+        font-size: $title-size-mobile;
         padding: 1rem;
         margin-top: 2rem;
     }
@@ -32,19 +32,11 @@
     }
 
     .contenedorTexto{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include flex(column);
         text-align: justify;
         
         .tituloJuego{
-            text-align: center;
-            font-size: 2rem;
-            margin-top: 1rem;
-            background-color: whitesmoke;
-            padding: 1rem;
-            border-radius: 1rem;
-            font-weight: bold;
+            @extend %diseñoTitulo;
         }
         .tituloUno{
             color: rgb(23, 89, 23);
@@ -63,14 +55,11 @@
         }
         
         .infoJuego{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            @include flex(column);
             text-align: center;
-            justify-content: center;
             .imgJuego{
-                border-radius: 1rem;
-                border: solid 1px whitesmoke;
+                border-radius: $border-radius;
+                border: solid 1px $color-principal;
                 margin: 1rem;
             }
             .descripciónJuego{
@@ -92,7 +81,7 @@
 
     .mainVideojuegos{
         .tituloPagina{
-            font-size: 2.8rem;
+            font-size: $title-size-tablet;
         }
         .parrafoCita{
             width: 80%;
@@ -119,7 +108,7 @@
                     margin: 0rem 1rem;
                 }
                 .descripciónJuego{
-                    display: flex;
+                    @include flex(column);
                     text-align: justify;
                     padding: 0.5rem;
                     margin: 0rem 1.5rem;
@@ -150,7 +139,7 @@
 
         .tituloPagina{
             grid-area: tituloPagina;
-            font-size: 3.2rem;
+            font-size: $title-size-desktop;
         }
     
         .parrafoCita{
@@ -201,10 +190,6 @@
                     width: 85%;
                     margin: 1rem 0rem;
                 }
-                // .imgJuego{
-                //     width: 250px;
-                //     height: 380px;
-                // }
             }        
         }
     }

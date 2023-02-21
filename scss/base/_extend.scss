@@ -1,0 +1,14 @@
+@import "variables";
+
+
+// Titulos de cada categoria (Titulo anime, titulo videojuego, titulo libro)
+
+%diseñoTitulo{
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 1rem;
+    background-color: $color-principal;
+    padding: 1rem;
+    border-radius: $border-radius;
+    font-weight: bold;
+}

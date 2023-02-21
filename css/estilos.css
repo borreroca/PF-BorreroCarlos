@@ -1,6 +1,15 @@
 @charset "UTF-8";
 @import url(https://fonts.googleapis.com/css?family=Noto+Sans);
 @import url("https://fonts.googleapis.com/css?family=Poppins:400");
+.mainAnime .seccionAnime .tituloAnime, .mainLibros .contenedorTexto .tituloLibro, .mainVideojuegos .contenedorTexto .tituloJuego {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 1rem;
+  background-color: #f8f8f8;
+  padding: 1rem;
+  border-radius: 1rem;
+  font-weight: bold; }
+
 * {
   margin: 0;
   padding: 0;
@@ -23,7 +32,7 @@ body {
 
 header .navbar {
   padding: 0;
-  background-color: whitesmoke;
+  background-color: #f8f8f8;
   border-bottom: solid black 1px; }
   header .navbar .container-nav {
     padding: 0; }
@@ -37,7 +46,7 @@ header .navbar {
       background-color: #c0b8b8;
       border: solid black 1px; }
     header .navbar .container-nav .navbar-collapse .navbar-nav .nav-item {
-      background-color: whitesmoke;
+      background-color: #f8f8f8;
       border-top: black 1px solid;
       border-bottom: black 1px solid; }
       header .navbar .container-nav .navbar-collapse .navbar-nav .nav-item .nav-link {
@@ -48,17 +57,19 @@ header .navbar {
     header .navbar .container-nav .navbar-collapse .navbar-nav .nav-item:hover {
       background-color: #112d22; }
       header .navbar .container-nav .navbar-collapse .navbar-nav .nav-item:hover .nav-link {
-        color: whitesmoke; }
+        color: #f8f8f8; }
 
 .mainIndex {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   text-align: center;
   padding: 0rem 2rem; }
   .mainIndex .tituloPagina {
     padding: 1rem;
-    margin-top: 2rem; }
+    margin-top: 2rem;
+    font-size: 2.5rem; }
   .mainIndex .subtituloPrincipal {
     padding: 1rem; }
   .mainIndex p {
@@ -69,8 +80,9 @@ header .navbar {
     margin: 1rem 0rem; }
   .mainIndex .contenedorClick {
     display: flex;
-    align-items: center;
-    text-align: center; }
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; }
     .mainIndex .contenedorClick .clickAqui {
       width: 40%;
       margin: 0;
@@ -99,7 +111,7 @@ header .navbar {
       margin-left: 1rem;
       border: solid 2px red;
       border-radius: 30px;
-      color: white;
+      color: #f8f8f8;
       animation-name: animacion-box;
       animation-iteration-count: infinite;
       animation-duration: 2s; }
@@ -120,6 +132,7 @@ header .navbar {
     .pagesContainer .linkPages .cardLink {
       display: flex;
       flex-direction: column;
+      justify-content: center;
       align-items: center;
       text-align: center;
       color: antiquewhite;
@@ -147,7 +160,7 @@ header .navbar {
         transform: rotateY(360deg); }
 
 footer {
-  background-color: whitesmoke;
+  background-color: #f8f8f8;
   text-align: center; }
   footer .footerDerechos {
     padding: 0.3rem 0rem;
@@ -160,6 +173,8 @@ footer {
 @media screen and (min-width: 600px) {
   header .navbar .container-nav .logo {
     font-size: 38px; }
+  .mainIndex .tituloPagina {
+    font-size: 3rem; }
   .mainIndex div {
     display: flex;
     gap: 1rem; }
@@ -176,7 +191,7 @@ footer {
   header .navbar .container-nav .navbar-brand {
     font-size: 50px !important; }
   header .navbar .container-nav .navbar-collapse .navbar-nav .nav-item {
-    background-color: whitesmoke;
+    background-color: #f8f8f8;
     border-bottom: black 1px solid; }
     header .navbar .container-nav .navbar-collapse .navbar-nav .nav-item .nav-link {
       font-size: 20px;
@@ -192,11 +207,14 @@ footer {
     .mainIndex div {
       display: flex;
       flex-direction: column;
+      justify-content: center;
+      align-items: center;
       gap: 1rem; }
     .mainIndex .subtituloPrincipal {
       margin: 2rem 0rem; }
     .mainIndex .tituloPagina {
-      grid-area: h1; }
+      grid-area: h1;
+      font-size: 3.2rem; }
     .mainIndex .subtituloUno {
       grid-area: subtituloUno; }
     .mainIndex .imgParrafo1 {
@@ -217,7 +235,8 @@ footer {
       grid-area: contenedorClick;
       display: flex;
       flex-direction: row;
-      justify-content: center; }
+      justify-content: center;
+      align-items: center; }
       .mainIndex .contenedorClick .clickAqui {
         width: 20%; }
       .mainIndex .contenedorClick .subClick {
@@ -233,9 +252,19 @@ footer {
     margin-top: 1rem;
     background-color: #e68080; } }
 
+.mainAnime .seccionAnime .tituloAnime, .mainLibros .contenedorTexto .tituloLibro, .mainVideojuegos .contenedorTexto .tituloJuego {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 1rem;
+  background-color: #f8f8f8;
+  padding: 1rem;
+  border-radius: 1rem;
+  font-weight: bold; }
+
 .mainContacto {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   text-align: center;
   padding: 0rem 2rem; }
@@ -243,7 +272,8 @@ footer {
     padding: 0.4rem; }
   .mainContacto .tituloPagina {
     padding: 1rem;
-    margin-top: 2rem; }
+    margin-top: 2rem;
+    font-size: 2.5rem; }
   .mainContacto .subForm {
     width: 80%;
     font-size: 1.2rem;
@@ -255,18 +285,19 @@ footer {
     width: 90%;
     max-width: 400px;
     margin-bottom: 1rem;
-    border-radius: 10%; }
+    border-radius: 1rem; }
   .mainContacto .contact_form {
     margin: 1rem auto;
-    border-radius: 10px;
+    border-radius: 1rem;
     padding-top: 1.6rem;
     padding-bottom: 1.4rem;
-    background-color: #fbfbfb; }
+    background-color: #f8f8f8; }
     .mainContacto .contact_form .containerForm {
       display: flex;
       flex-direction: column;
-      text-align: center;
-      align-items: center; }
+      justify-content: center;
+      align-items: center;
+      text-align: center; }
       .mainContacto .contact_form .containerForm .tituloForm {
         width: 80%;
         font-size: 39px;
@@ -281,7 +312,7 @@ footer {
           background-color: #fbfbfb;
           width: 100%;
           height: 2.5rem;
-          border-radius: 5px;
+          border-radius: 1rem;
           border: solid 1px #ab4493;
           margin-top: 0.6rem;
           padding-left: 1rem;
@@ -290,7 +321,7 @@ footer {
           background-color: #fbfbfb;
           width: 100%;
           height: 250px;
-          border-radius: 5px;
+          border-radius: 1rem;
           border: solid 1px #ab4493;
           padding-left: 10px;
           padding-top: 15px; }
@@ -303,7 +334,7 @@ footer {
         background-color: #ab4493;
         border-color: #ab4493;
         border-style: solid;
-        border-radius: 10px;
+        border-radius: 1rem;
         width: 70%;
         cursor: pointer; }
         .mainContacto .contact_form .containerForm .mainForm .buttonForm .textButton {
@@ -317,8 +348,9 @@ footer {
   .mainContacto .linkSocialNet {
     display: flex;
     flex-direction: column;
-    text-align: center;
-    justify-content: center; }
+    justify-content: center;
+    align-items: center;
+    text-align: center; }
     .mainContacto .linkSocialNet .containerNetworks {
       display: flex;
       justify-content: center;
@@ -330,7 +362,7 @@ footer {
         width: 60px;
         height: 60px;
         line-height: 60px;
-        background-color: whitesmoke;
+        background-color: #f8f8f8;
         color: #262626;
         border: solid black 1px;
         border-radius: 50%;
@@ -340,22 +372,24 @@ footer {
         transform: scale(1.2); }
       .mainContacto .linkSocialNet .containerNetworks .linkFace:hover {
         background-color: #3b5999;
-        color: whitesmoke;
-        border-color: whitesmoke; }
+        color: #f8f8f8;
+        border-color: #f8f8f8; }
       .mainContacto .linkSocialNet .containerNetworks .linkTwt:hover {
         background-color: #55acee;
-        color: whitesmoke;
-        border-color: whitesmoke; }
+        color: #f8f8f8;
+        border-color: #f8f8f8; }
       .mainContacto .linkSocialNet .containerNetworks .linkYout:hover {
         background-color: #c4302b;
-        color: whitesmoke;
-        border-color: whitesmoke; }
+        color: #f8f8f8;
+        border-color: #f8f8f8; }
       .mainContacto .linkSocialNet .containerNetworks .linkLinke:hover {
         background-color: #0077b5;
-        color: whitesmoke;
-        border-color: whitesmoke; }
+        color: #f8f8f8;
+        border-color: #f8f8f8; }
 
 @media screen and (min-width: 600px) {
+  .mainContacto .tituloPagina {
+    font-size: 3rem; }
   .mainContacto .subtituloPrincipal {
     padding: 2rem; }
   .mainContacto .mapIframe {
@@ -363,12 +397,13 @@ footer {
     min-height: 400px;
     max-width: 600px;
     margin-bottom: 2rem;
-    border-radius: 10%; }
+    border-radius: 1rem; }
   .mainContacto .linkSocialNet {
     display: flex;
     flex-direction: column;
-    text-align: center;
-    justify-content: center; }
+    justify-content: center;
+    align-items: center;
+    text-align: center; }
     .mainContacto .linkSocialNet .containerNetworks {
       gap: 2rem;
       font-size: 2.5rem; }
@@ -387,7 +422,8 @@ footer {
     justify-content: center;
     justify-items: center; }
     .mainContacto .tituloPagina {
-      grid-area: tituloPagina; }
+      grid-area: tituloPagina;
+      font-size: 3.2rem; }
     .mainContacto .subForm {
       grid-area: subForm; }
     .mainContacto .contact_form {
@@ -424,9 +460,19 @@ footer {
         font-size: 1rem;
         color: #0e0e0e; } }
 
+.mainAnime .seccionAnime .tituloAnime, .mainLibros .contenedorTexto .tituloLibro, .mainVideojuegos .contenedorTexto .tituloJuego {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 1rem;
+  background-color: #f8f8f8;
+  padding: 1rem;
+  border-radius: 1rem;
+  font-weight: bold; }
+
 .mainAnime {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   text-align: center;
   padding: 0rem 2rem; }
@@ -443,19 +489,28 @@ footer {
     border: solid #a79f9f 3px;
     padding: 1.5rem 1rem;
     margin: 1rem 0rem; }
-    .mainAnime .seccionAnime .subtitulos {
+    .mainAnime .seccionAnime .tituloAnime {
       margin: 1rem; }
+    .mainAnime .seccionAnime .animeUno {
+      color: #175917; }
+    .mainAnime .seccionAnime .animeDos {
+      color: #1d1d77; }
+    .mainAnime .seccionAnime .animeTres {
+      color: #6b2121; }
+    .mainAnime .seccionAnime .animeCuatro {
+      color: #8c9241; }
     .mainAnime .seccionAnime .contenedorInfo {
       display: flex;
       flex-direction: column;
-      text-align: justify;
-      align-items: center; }
+      justify-content: center;
+      align-items: center;
+      text-align: justify; }
       .mainAnime .seccionAnime .contenedorInfo .parrafoInfo {
         width: 85%; }
     .mainAnime .seccionAnime .imgAnime {
       margin: 1rem;
       width: 80%;
-      border-radius: 0.5rem;
+      border-radius: 1rem;
       border: 1px black solid; }
 
 @media screen and (min-width: 600px) {
@@ -465,11 +520,12 @@ footer {
     font-size: 1.3rem; }
   .mainAnime .tituloPagina {
     padding: 1rem;
-    margin-top: 2rem; }
+    margin-top: 2rem;
+    font-size: 3rem; }
   .mainAnime .descripciónCategoria {
     font-size: 1.4rem;
     margin: 1rem 0rem; }
-  .mainAnime .seccionAnime .subtitulos {
+  .mainAnime .seccionAnime .tituloAnime {
     font-size: 2rem; }
   .mainAnime .seccionAnime .contenedorInfo .fechaEstreno {
     font-size: 1.5rem; } }
@@ -508,16 +564,26 @@ footer {
       flex-direction: column;
       justify-content: center;
       align-items: center; }
-      .mainAnime .seccionAnime .subtitulos {
+      .mainAnime .seccionAnime .tituloAnime {
         font-size: 2rem; }
       .mainAnime .seccionAnime .contenedorInfo .fechaEstreno {
         font-size: 1.5rem; }
   .pagesContainer {
     margin-top: 1rem; } }
 
+.mainAnime .seccionAnime .tituloAnime, .mainLibros .contenedorTexto .tituloLibro, .mainVideojuegos .contenedorTexto .tituloJuego {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 1rem;
+  background-color: #f8f8f8;
+  padding: 1rem;
+  border-radius: 1rem;
+  font-weight: bold; }
+
 .mainLibros {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   text-align: center;
   padding: 0rem 2rem; }
@@ -539,16 +605,9 @@ footer {
   .mainLibros .contenedorTexto {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     text-align: justify; }
-    .mainLibros .contenedorTexto .tituloLibro {
-      text-align: center;
-      font-size: 2rem;
-      margin-top: 1rem;
-      background-color: whitesmoke;
-      padding: 1rem;
-      border-radius: 1rem;
-      font-weight: bold; }
     .mainLibros .contenedorTexto .tituloUno {
       color: #175917; }
     .mainLibros .contenedorTexto .tituloDos {
@@ -563,7 +622,7 @@ footer {
         font-style: italic; }
     .mainLibros .contenedorTexto .imgLibro {
       border-radius: 1rem;
-      border: solid 1px whitesmoke;
+      border: solid 1px #f8f8f8;
       margin: 1rem; }
   .mainLibros .lineaSeparadora {
     width: 100%;
@@ -586,7 +645,7 @@ footer {
 
 @media screen and (min-width: 600px) {
   .mainLibros .tituloPagina {
-    font-size: 2.8rem; }
+    font-size: 3rem; }
   .mainLibros .parrafoCita {
     width: 70%;
     font-size: 1.3rem; }
@@ -649,14 +708,24 @@ footer {
       height: 100%;
       margin: 1rem; } }
 
+.mainAnime .seccionAnime .tituloAnime, .mainLibros .contenedorTexto .tituloLibro, .mainVideojuegos .contenedorTexto .tituloJuego {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 1rem;
+  background-color: #f8f8f8;
+  padding: 1rem;
+  border-radius: 1rem;
+  font-weight: bold; }
+
 .mainVideojuegos {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   text-align: center;
   padding: 0rem 1rem; }
   .mainVideojuegos .tituloPagina {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     padding: 1rem;
     margin-top: 2rem; }
   .mainVideojuegos .parrafoCita {
@@ -673,16 +742,9 @@ footer {
   .mainVideojuegos .contenedorTexto {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     text-align: justify; }
-    .mainVideojuegos .contenedorTexto .tituloJuego {
-      text-align: center;
-      font-size: 2rem;
-      margin-top: 1rem;
-      background-color: whitesmoke;
-      padding: 1rem;
-      border-radius: 1rem;
-      font-weight: bold; }
     .mainVideojuegos .contenedorTexto .tituloUno {
       color: #175917; }
     .mainVideojuegos .contenedorTexto .tituloDos {
@@ -696,12 +758,12 @@ footer {
     .mainVideojuegos .contenedorTexto .infoJuego {
       display: flex;
       flex-direction: column;
+      justify-content: center;
       align-items: center;
-      text-align: center;
-      justify-content: center; }
+      text-align: center; }
       .mainVideojuegos .contenedorTexto .infoJuego .imgJuego {
         border-radius: 1rem;
-        border: solid 1px whitesmoke;
+        border: solid 1px #f8f8f8;
         margin: 1rem; }
       .mainVideojuegos .contenedorTexto .infoJuego .descripciónJuego {
         display: none; }
@@ -715,7 +777,7 @@ footer {
 
 @media screen and (min-width: 600px) {
   .mainVideojuegos .tituloPagina {
-    font-size: 2.8rem; }
+    font-size: 3rem; }
   .mainVideojuegos .parrafoCita {
     width: 80%;
     font-size: 1.2rem; }
@@ -735,6 +797,9 @@ footer {
       margin: 0rem 1rem; }
     .mainVideojuegos .contenedorTexto .infoJuego .descripciónJuego {
       display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       text-align: justify;
       padding: 0.5rem;
       margin: 0rem 1.5rem;
