@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url(https://fonts.googleapis.com/css?family=Noto+Sans);
 @import url("https://fonts.googleapis.com/css?family=Poppins:400");
 * {
@@ -9,10 +10,10 @@ body {
   font-family: 'Poppins', sans-serif;
   background: linear-gradient(51deg, #500e0e, #221c22, #493342, #221046, #11144C);
   background-size: 360% 360%;
-  animation: gradient-animation 30s ease infinite;
+  animation: gradient-animation-body 30s ease infinite;
   color: #cbcccf; }
 
-@keyframes gradient-animation {
+@keyframes gradient-animation-body {
   0% {
     background-position: 0% 50%; }
   50% {
@@ -430,10 +431,14 @@ footer {
   text-align: center;
   padding: 0rem 2rem; }
   .mainAnime .tituloPagina {
+    font-size: 2.5rem;
     padding: 1rem;
     margin-top: 2rem; }
   .mainAnime .parrafoCita {
     width: 90%; }
+  .mainAnime .descripciónCategoria {
+    text-align: justify;
+    font-size: 1.2rem; }
   .mainAnime .seccionAnime {
     border: solid #a79f9f 3px;
     padding: 1.5rem 1rem;
@@ -461,6 +466,9 @@ footer {
   .mainAnime .tituloPagina {
     padding: 1rem;
     margin-top: 2rem; }
+  .mainAnime .descripciónCategoria {
+    font-size: 1.4rem;
+    margin: 1rem 0rem; }
   .mainAnime .seccionAnime .subtitulos {
     font-size: 2rem; }
   .mainAnime .seccionAnime .contenedorInfo .fechaEstreno {
@@ -473,7 +481,7 @@ footer {
     grid-template-columns: auto;
     grid-template-rows: auto;
     gap: 1rem;
-    grid-template-areas: "tituloPagina tituloPagina" "parrafoCita parrafoCita" "seccionUno seccionDos" "seccionTres seccionCuatro";
+    grid-template-areas: "tituloPagina tituloPagina" "parrafoCita parrafoCita" "descripciónCategoria descripciónCategoria" "seccionUno seccionDos" "seccionTres seccionCuatro";
     justify-content: center;
     justify-items: center; }
     .mainAnime .tituloPagina {
@@ -482,6 +490,9 @@ footer {
     .mainAnime .parrafoCita {
       grid-area: parrafoCita;
       width: 70%; }
+    .mainAnime .descripciónCategoria {
+      grid-area: descripciónCategoria;
+      width: 75%; }
     .mainAnime .seccionUno {
       grid-area: seccionUno; }
     .mainAnime .seccionDos {
@@ -510,3 +521,272 @@ footer {
   align-items: center;
   text-align: center;
   padding: 0rem 2rem; }
+  .mainLibros .tituloPagina {
+    font-size: 2.5rem;
+    padding: 1rem;
+    margin-top: 2rem; }
+  .mainLibros .parrafoCita {
+    width: 90%;
+    font-size: 1rem; }
+    .mainLibros .parrafoCita .citaBajoTitulo {
+      font-style: italic; }
+  .mainLibros .subtituloCategoria {
+    padding: 1rem;
+    font-size: 2rem; }
+  .mainLibros .descripciónCategoria {
+    text-align: justify;
+    font-size: 1.2rem; }
+  .mainLibros .contenedorTexto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify; }
+    .mainLibros .contenedorTexto .tituloLibro {
+      text-align: center;
+      font-size: 2rem;
+      margin-top: 1rem;
+      background-color: whitesmoke;
+      padding: 1rem;
+      border-radius: 1rem;
+      font-weight: bold; }
+    .mainLibros .contenedorTexto .tituloUno {
+      color: #175917; }
+    .mainLibros .contenedorTexto .tituloDos {
+      color: #1d1d77; }
+    .mainLibros .contenedorTexto .tituloTres {
+      color: #6b2121; }
+    .mainLibros .contenedorTexto .autorLibro {
+      font-size: 1rem; }
+    .mainLibros .contenedorTexto .textoLibro {
+      font-size: 1.2rem; }
+      .mainLibros .contenedorTexto .textoLibro .citaLibro {
+        font-style: italic; }
+    .mainLibros .contenedorTexto .imgLibro {
+      border-radius: 1rem;
+      border: solid 1px whitesmoke;
+      margin: 1rem; }
+  .mainLibros .lineaSeparadora {
+    width: 100%;
+    height: 0.1rem;
+    background: linear-gradient(42deg, #f6910b, #b7b8c7, #2cdfd2, #1703e5);
+    background-size: 240% 240%;
+    animation: gradient-animation 4s ease infinite;
+    margin: 2rem 0rem; }
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%; }
+  50% {
+    background-position: 100% 50%; }
+  100% {
+    background-position: 0% 50%; } }
+
+.pagesContainer {
+  margin-top: 2rem; }
+
+@media screen and (min-width: 600px) {
+  .mainLibros .tituloPagina {
+    font-size: 2.8rem; }
+  .mainLibros .parrafoCita {
+    width: 70%;
+    font-size: 1.3rem; }
+  .mainLibros .subtituloCategoria {
+    font-size: 2.5rem; }
+  .mainLibros .descripciónCategoria {
+    width: 80%;
+    margin: 1rem 0rem; }
+  .mainLibros .contenedorTexto .tituloLibro {
+    font-size: 2rem; }
+  .mainLibros .contenedorTexto .autorLibro {
+    font-size: 1.3rem; }
+  .mainLibros .contenedorTexto .textoLibro {
+    font-size: 1.2rem; } }
+
+@media screen and (min-width: 992px) {
+  .mainLibros {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas: "tituloPagina tituloPagina tituloPagina tituloPagina tituloPagina" "parrafoCita parrafoCita parrafoCita parrafoCita parrafoCita" "subtituloCategoria subtituloCategoria subtituloCategoria subtituloCategoria subtituloCategoria" "descripciónCategoria descripciónCategoria descripciónCategoria descripciónCategoria descripciónCategoria" "libroUno separadorUno libroDos separadorDos libroTres";
+    justify-content: center;
+    justify-items: center; }
+    .mainLibros .tituloPagina {
+      grid-area: tituloPagina;
+      font-size: 3.2rem; }
+    .mainLibros .parrafoCita {
+      grid-area: parrafoCita;
+      width: 70%; }
+    .mainLibros .subtituloCategoria {
+      grid-area: subtituloCategoria;
+      font-size: 2.5rem; }
+    .mainLibros .descripciónCategoria {
+      grid-area: descripciónCategoria;
+      width: 70%;
+      font-size: 1.5rem; }
+    .mainLibros .contenedorTexto .tituloLibro {
+      font-size: 1.8rem;
+      width: 100%; }
+    .mainLibros .contenedorTexto .autorLibro {
+      font-size: 1.3rem; }
+    .mainLibros .contenedorTexto .textoLibro {
+      width: 95%; }
+    .mainLibros .contenedorTexto .imgLibro {
+      width: 250px;
+      height: 380px; }
+    .mainLibros .libroUno {
+      grid-area: libroUno; }
+    .mainLibros .libroDos {
+      grid-area: libroDos; }
+    .mainLibros .libroTres {
+      grid-area: libroTres; }
+    .mainLibros .separadorUno {
+      grid-area: separadorUno; }
+    .mainLibros .separadorDos {
+      grid-area: separadorDos; }
+    .mainLibros .lineaSeparadora {
+      width: 0.1rem;
+      height: 100%;
+      margin: 1rem; } }
+
+.mainVideojuegos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0rem 1rem; }
+  .mainVideojuegos .tituloPagina {
+    font-size: 2.2rem;
+    padding: 1rem;
+    margin-top: 2rem; }
+  .mainVideojuegos .parrafoCita {
+    width: 90%;
+    font-size: 1rem; }
+    .mainVideojuegos .parrafoCita .citaBajoTitulo {
+      font-style: italic; }
+  .mainVideojuegos .subtituloCategoria {
+    padding: 1rem;
+    font-size: 2rem; }
+  .mainVideojuegos .descripciónCategoria {
+    text-align: justify;
+    font-size: 1rem; }
+  .mainVideojuegos .contenedorTexto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify; }
+    .mainVideojuegos .contenedorTexto .tituloJuego {
+      text-align: center;
+      font-size: 2rem;
+      margin-top: 1rem;
+      background-color: whitesmoke;
+      padding: 1rem;
+      border-radius: 1rem;
+      font-weight: bold; }
+    .mainVideojuegos .contenedorTexto .tituloUno {
+      color: #175917; }
+    .mainVideojuegos .contenedorTexto .tituloDos {
+      color: #1d1d77; }
+    .mainVideojuegos .contenedorTexto .tituloTres {
+      color: #6b2121; }
+    .mainVideojuegos .contenedorTexto .tituloCuatro {
+      color: #8c9241; }
+    .mainVideojuegos .contenedorTexto .fechaSalida {
+      font-size: 1rem; }
+    .mainVideojuegos .contenedorTexto .infoJuego {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      justify-content: center; }
+      .mainVideojuegos .contenedorTexto .infoJuego .imgJuego {
+        border-radius: 1rem;
+        border: solid 1px whitesmoke;
+        margin: 1rem; }
+      .mainVideojuegos .contenedorTexto .infoJuego .descripciónJuego {
+        display: none; }
+  .mainVideojuegos .lineaSeparadora {
+    width: 100%;
+    height: 0.1rem;
+    background: linear-gradient(42deg, #f6910b, #b7b8c7, #2cdfd2, #1703e5);
+    background-size: 240% 240%;
+    animation: gradient-animation 4s ease infinite;
+    margin: 2rem 0rem; }
+
+@media screen and (min-width: 600px) {
+  .mainVideojuegos .tituloPagina {
+    font-size: 2.8rem; }
+  .mainVideojuegos .parrafoCita {
+    width: 80%;
+    font-size: 1.2rem; }
+  .mainVideojuegos .descripciónCategoria {
+    font-size: 1.2rem;
+    width: 80%;
+    margin-top: 1rem; }
+  .mainVideojuegos .subtituloCategoria {
+    font-size: 2.5rem; }
+  .mainVideojuegos .contenedorTexto .tituloJuego {
+    font-size: 2rem; }
+  .mainVideojuegos .contenedorTexto .fechaSalida {
+    font-size: 1.3rem; }
+  .mainVideojuegos .contenedorTexto .infoJuego {
+    flex-direction: row; }
+    .mainVideojuegos .contenedorTexto .infoJuego .imgJuego {
+      margin: 0rem 1rem; }
+    .mainVideojuegos .contenedorTexto .infoJuego .descripciónJuego {
+      display: flex;
+      text-align: justify;
+      padding: 0.5rem;
+      margin: 0rem 1.5rem;
+      font-size: 1rem; } }
+
+@media screen and (min-width: 992px) {
+  .mainVideojuegos {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas: "tituloPagina tituloPagina tituloPagina" "parrafoCita parrafoCita parrafoCita" "descripciónCategoria descripciónCategoria descripciónCategoria" "subtituloCategoria subtituloCategoria subtituloCategoria" "juegoUno separadorUno juegoDos" "separadorDos separadorDos separadorDos" "juegoTres separadorTres juegoCuatro";
+    justify-content: center;
+    justify-items: center; }
+    .mainVideojuegos .tituloPagina {
+      grid-area: tituloPagina;
+      font-size: 3.2rem; }
+    .mainVideojuegos .parrafoCita {
+      grid-area: parrafoCita;
+      width: 70%; }
+    .mainVideojuegos .descripciónCategoria {
+      grid-area: descripciónCategoria;
+      font-size: 1.4rem; }
+    .mainVideojuegos .subtituloCategoria {
+      grid-area: subtituloCategoria;
+      font-size: 2.5rem; }
+    .mainVideojuegos .juegoUno {
+      grid-area: juegoUno; }
+    .mainVideojuegos .juegoDos {
+      grid-area: juegoDos; }
+    .mainVideojuegos .juegoTres {
+      grid-area: juegoTres; }
+    .mainVideojuegos .juegoCuatro {
+      grid-area: juegoCuatro; }
+    .mainVideojuegos .separadorUno {
+      grid-area: separadorUno;
+      width: 0.1rem;
+      height: 100%;
+      margin: 1rem; }
+    .mainVideojuegos .separadorDos {
+      grid-area: separadorDos; }
+    .mainVideojuegos .separadorTres {
+      grid-area: separadorTres;
+      width: 0.1rem;
+      height: 100%;
+      margin: 1rem; }
+    .mainVideojuegos .contenedorTexto .tituloJuego {
+      font-size: 1.8rem; }
+    .mainVideojuegos .contenedorTexto .fechaSalida {
+      font-size: 1.3rem; }
+    .mainVideojuegos .contenedorTexto .infoJuego {
+      flex-direction: column; }
+      .mainVideojuegos .contenedorTexto .infoJuego .descripciónJuego {
+        width: 85%;
+        margin: 1rem 0rem; } }

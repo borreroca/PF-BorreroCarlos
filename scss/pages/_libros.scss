@@ -5,4 +5,189 @@
     align-items: center;
     text-align: center;
     padding: 0rem 2rem;
+    .tituloPagina{
+        font-size: 2.5rem;
+        padding: 1rem;
+        margin-top: 2rem;
+    }
+    .parrafoCita{
+        width: 90%;
+        font-size: 1rem;
+        .citaBajoTitulo{
+            font-style: italic;
+        }
+    }
+    .subtituloCategoria{
+        padding: 1rem;
+        font-size: 2rem;
+    }
+
+    .descripciónCategoria{
+        text-align: justify;
+        font-size: 1.2rem;
+    }
+
+    .contenedorTexto{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: justify;
+        // justify-content: start;
+        .tituloLibro{
+            text-align: center;
+            font-size: 2rem;
+            margin-top: 1rem;
+            background-color: whitesmoke;
+            padding: 1rem;
+            border-radius: 1rem;
+            font-weight: bold;
+        }
+        .tituloUno{
+            color: rgb(23, 89, 23);
+        }
+        .tituloDos{
+            color: rgb(29, 29, 119);
+        }
+        .tituloTres{
+            color: rgb(107, 33, 33);
+        }
+        .autorLibro{
+            font-size: 1rem;
+        }
+        .textoLibro{
+            font-size: 1.2rem;
+            .citaLibro{
+                font-style: italic;
+            }            
+        }
+        .imgLibro{
+            border-radius: 1rem;
+            border: solid 1px whitesmoke;
+            margin: 1rem;
+        }
+    }
+    .lineaSeparadora{
+        width: 100%;
+        height: 0.1rem;
+        background: linear-gradient(42deg,#f6910b,#b7b8c7,#2cdfd2,#1703e5);
+        background-size: 240% 240%;
+        animation: gradient-animation 4s ease infinite;
+        margin: 2rem 0rem;
+    }
+
+    @keyframes gradient-animation {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+    }
+}
+
+.pagesContainer{
+    margin-top: 2rem;
+}
+
+@media screen and (min-width:600px){
+    .mainLibros{
+        .tituloPagina{
+            font-size: 2.8rem;
+        }
+        .parrafoCita{
+            width: 70%;
+            font-size: 1.3rem;
+        }
+        .subtituloCategoria{
+            font-size: 2.5rem;
+        }
+        .descripciónCategoria{
+            width: 80%;
+            margin: 1rem 0rem;
+        }
+        .contenedorTexto{
+            .tituloLibro{
+                font-size: 2rem;
+            }
+            .autorLibro{
+                font-size: 1.3rem;
+            }
+            .textoLibro{
+                font-size: 1.2rem;        
+            }
+        }
+
+    }
+}
+
+@media screen and (min-width:992px){
+    .mainLibros{
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        // gap: 0.5rem;
+        grid-template-areas:
+            "tituloPagina tituloPagina tituloPagina tituloPagina tituloPagina"
+            "parrafoCita parrafoCita parrafoCita parrafoCita parrafoCita"
+            "subtituloCategoria subtituloCategoria subtituloCategoria subtituloCategoria subtituloCategoria"
+            "descripciónCategoria descripciónCategoria descripciónCategoria descripciónCategoria descripciónCategoria"
+            "libroUno separadorUno libroDos separadorDos libroTres";
+        justify-content: center;
+        justify-items: center;
+
+        .tituloPagina{
+            grid-area: tituloPagina;
+            font-size: 3.2rem;
+        }
+    
+        .parrafoCita{
+            grid-area: parrafoCita;
+            width: 70%;
+        }
+
+        .subtituloCategoria{
+            grid-area: subtituloCategoria;
+            font-size: 2.5rem;
+        }
+
+        .descripciónCategoria{
+            grid-area: descripciónCategoria;
+            width: 70%;
+            font-size: 1.5rem;
+        }
+
+        .contenedorTexto{
+            
+            .tituloLibro{
+                font-size: 1.8rem;
+                width: 100%;
+            }
+            .autorLibro{
+                font-size: 1.3rem;
+            }            
+            .textoLibro{
+                width: 95%;
+            }
+            .imgLibro{
+                width: 250px;
+                height: 380px;
+            }
+        }
+
+        .libroUno{grid-area: libroUno;}
+        .libroDos{grid-area: libroDos;}
+        .libroTres{grid-area: libroTres;}
+        .separadorUno{grid-area: separadorUno;}
+        .separadorDos{grid-area: separadorDos;}
+
+        .lineaSeparadora{
+            width: 0.1rem;
+            height: 100%;
+            margin: 1rem;
+        }
+    }
 }

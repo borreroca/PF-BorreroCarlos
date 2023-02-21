@@ -7,12 +7,18 @@
     padding: 0rem 2rem;
 
     .tituloPagina{
+        font-size: 2.5rem;
         padding: 1rem;
         margin-top: 2rem;
     }
 
     .parrafoCita{
         width: 90%;
+    }
+
+    .descripciónCategoria{
+        text-align: justify;
+        font-size: 1.2rem;
     }
 
     .seccionAnime{
@@ -59,6 +65,11 @@
             margin-top: 2rem;
         }
 
+        .descripciónCategoria{
+            font-size: 1.4rem;
+            margin: 1rem 0rem;
+        }
+
         .seccionAnime{
             .subtitulos{
                 font-size: 2rem;
@@ -70,7 +81,6 @@
             }
         }
     }
-    
 }
 
 @media screen and (min-width:992px){
@@ -84,6 +94,7 @@
         grid-template-areas:
             "tituloPagina tituloPagina"
             "parrafoCita parrafoCita"
+            "descripciónCategoria descripciónCategoria"
             "seccionUno seccionDos"
             "seccionTres seccionCuatro";
     
@@ -98,6 +109,11 @@
         .parrafoCita{
             grid-area: parrafoCita;
             width: 70%;
+        }
+
+        .descripciónCategoria{
+            grid-area: descripciónCategoria;
+            width: 75%;
         }
 
         .seccionUno{grid-area: seccionUno}

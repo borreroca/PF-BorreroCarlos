@@ -1,0 +1,211 @@
+
+
+.mainVideojuegos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0rem 1rem;
+
+    .tituloPagina{
+        font-size: 2.2rem;
+        padding: 1rem;
+        margin-top: 2rem;
+    }
+
+    .parrafoCita{
+        width: 90%;
+        font-size: 1rem;
+        .citaBajoTitulo{
+            font-style: italic;
+        }
+    }
+
+    .subtituloCategoria{
+        padding: 1rem;
+        font-size: 2rem;
+    }
+
+    .descripciónCategoria{
+        text-align: justify;
+        font-size: 1rem;
+    }
+
+    .contenedorTexto{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: justify;
+        
+        .tituloJuego{
+            text-align: center;
+            font-size: 2rem;
+            margin-top: 1rem;
+            background-color: whitesmoke;
+            padding: 1rem;
+            border-radius: 1rem;
+            font-weight: bold;
+        }
+        .tituloUno{
+            color: rgb(23, 89, 23);
+        }
+        .tituloDos{
+            color: rgb(29, 29, 119);
+        }
+        .tituloTres{
+            color: rgb(107, 33, 33);
+        }
+        .tituloCuatro{
+            color: rgb(140, 146, 65);
+        }
+        .fechaSalida{
+            font-size: 1rem;
+        }
+        
+        .infoJuego{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            .imgJuego{
+                border-radius: 1rem;
+                border: solid 1px whitesmoke;
+                margin: 1rem;
+            }
+            .descripciónJuego{
+                display: none;
+            }
+        }        
+    }
+    .lineaSeparadora{
+        width: 100%;
+        height: 0.1rem;
+        background: linear-gradient(42deg,#f6910b,#b7b8c7,#2cdfd2,#1703e5);
+        background-size: 240% 240%;
+        animation: gradient-animation 4s ease infinite;
+        margin: 2rem 0rem;
+    }
+}
+
+@media screen and (min-width:600px){
+
+    .mainVideojuegos{
+        .tituloPagina{
+            font-size: 2.8rem;
+        }
+        .parrafoCita{
+            width: 80%;
+            font-size: 1.2rem;
+        }
+        .descripciónCategoria{
+            font-size: 1.2rem;
+            width: 80%;
+            margin-top: 1rem;
+        }
+        .subtituloCategoria{
+            font-size: 2.5rem;
+        }
+        .contenedorTexto{
+            .tituloJuego{
+                font-size: 2rem;
+            }
+            .fechaSalida{
+                font-size: 1.3rem;
+            }
+            .infoJuego{
+                flex-direction: row;
+                .imgJuego{
+                    margin: 0rem 1rem;
+                }
+                .descripciónJuego{
+                    display: flex;
+                    text-align: justify;
+                    padding: 0.5rem;
+                    margin: 0rem 1.5rem;
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width:992px){
+    .mainVideojuegos{
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        // gap: 0.5rem;
+        grid-template-areas:
+            "tituloPagina tituloPagina tituloPagina"
+            "parrafoCita parrafoCita parrafoCita"
+            "descripciónCategoria descripciónCategoria descripciónCategoria"
+            "subtituloCategoria subtituloCategoria subtituloCategoria"
+            "juegoUno separadorUno juegoDos"
+            "separadorDos separadorDos separadorDos"
+            "juegoTres separadorTres juegoCuatro";
+        justify-content: center;
+        justify-items: center;
+
+        .tituloPagina{
+            grid-area: tituloPagina;
+            font-size: 3.2rem;
+        }
+    
+        .parrafoCita{
+            grid-area: parrafoCita;
+            width: 70%;
+        }
+
+        .descripciónCategoria{
+            grid-area: descripciónCategoria;
+            font-size: 1.4rem;
+        }
+
+        .subtituloCategoria{
+            grid-area: subtituloCategoria;
+            font-size: 2.5rem;
+        }
+
+        .juegoUno{grid-area: juegoUno;}
+        .juegoDos{grid-area: juegoDos;}
+        .juegoTres{grid-area: juegoTres;}
+        .juegoCuatro{grid-area: juegoCuatro;}
+        .separadorUno{
+            grid-area: separadorUno;
+            width: 0.1rem;
+            height: 100%;
+            margin: 1rem;
+        }
+        .separadorDos{grid-area: separadorDos;}
+        .separadorTres{
+            grid-area: separadorTres;
+            width: 0.1rem;
+            height: 100%;
+            margin: 1rem;
+        }
+        
+        .contenedorTexto{
+            
+            .tituloJuego{
+                font-size: 1.8rem;
+                // width: 80%;
+            }
+            .fechaSalida{
+                font-size: 1.3rem;
+            }
+            .infoJuego{
+                flex-direction: column;
+                .descripciónJuego{
+                    width: 85%;
+                    margin: 1rem 0rem;
+                }
+                // .imgJuego{
+                //     width: 250px;
+                //     height: 380px;
+                // }
+            }        
+        }
+    }
+}

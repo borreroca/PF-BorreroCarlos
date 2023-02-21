@@ -11,12 +11,12 @@ body{
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(51deg,#500e0e,#221c22,#493342,#221046,#11144C);
     background-size: 360% 360%;
-    animation: gradient-animation 30s ease infinite;
+    animation: gradient-animation-body 30s ease infinite;
     color: #cbcccf;
 }
     
   
-  @keyframes gradient-animation {
+  @keyframes gradient-animation-body {
     0% {
       background-position: 0% 50%;
     }
